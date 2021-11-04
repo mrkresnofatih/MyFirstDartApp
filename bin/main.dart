@@ -19,4 +19,9 @@ void main(List<String> args){
   stdout.write('Your age: ');
   int age = int.parse(stdin.readLineSync()!);
   print('Hey I\'m $name, and I\'m $age yo.');
+
+  //parse
+  int myInt = 2;
+  double myDouble  = double.parse(myInt.toString());
+  print(myDouble);
 }
