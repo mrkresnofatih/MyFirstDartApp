@@ -1,5 +1,8 @@
 import 'dart:io';
 
+import 'book.dart';
+import 'manga.dart';
+
 void main(List<String> args) {
   int myAge;
   String greetings = 'hello world';
@@ -42,9 +45,34 @@ void main(List<String> args) {
   int newNum = 56;
   print(addTwoNumbers(num: 3));
 
+  // loops
+  printMultiple("hello", 4);
+
+  // map
+  var capital = {
+    'jakarta': 'indonesia',
+    'tokyo':'japan'
+  };
+  print(capital['jakarta']);
+  print(capital.keys.toList());
+  
+  // class
+  var newBook = new Book('Fatih', 234, 'Kresno');
+  newBook.author = 'Imani';
+  print(newBook.author);
+  
+  var newManga = new Manga('Conan', 1998, 'Aoyama Gosho', true);
+  print(newManga.isColored);
+
 }
 
 // optional named params
 int addTwoNumbers({required int num, int num2 = 4}){
   return num+2+num2;
+}
+
+void printMultiple(String text, int times){
+  for(int i = 0; i<times; i++){
+    print(text);
+  }
 }
