@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'book.dart';
 import 'manga.dart';
+import 'musician.dart';
 
 void main(List<String> args) {
   int myAge;
@@ -63,6 +64,10 @@ void main(List<String> args) {
   
   var newManga = new Manga('Conan', 1998, 'Aoyama Gosho', true);
   print(newManga.isColored);
+
+  // mixins
+  var newMusician = new Musician();
+  newMusician.perform();
 
 }
 
